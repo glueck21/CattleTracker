@@ -1,0 +1,131 @@
+<ScrollView android:id="@+id/detailsScrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:useDefaultMargins="true">
+
+        <TextView
+            android:id="@+id/cowIdLabelTextView"
+            style="@style/CattleLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:text="@string/label_cow_id"/>
+
+        <TextView
+            android:id="@+id/cowIdTextView"
+            style="@style/CattleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="0"/>
+
+        <TextView
+            android:id="@+id/calfIdLabelTextView"
+            style="@style/CattleLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:text="@string/label_calf_id" />
+
+        <TextView
+            android:id="@+id/calfIdTextView"
+            style="@style/CattleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="1"/>
+
+        <TextView
+            android:id="@+id/sireIdLabelTextView"
+            style="@style/CattleLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:text="@string/label_sire_id"/>
+
+        <TextView
+            android:id="@+id/sireIdTextView"
+            style="@style/CattleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="2"/>
+
+        <TextView
+            android:id="@+id/birthDateLabelTextView"
+            style="@style/CattleLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:text="@string/label_birth_date"/>
+
+        <TextView
+            android:id="@+id/birthDateTextView"
+            style="@style/CattleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="3"/>
+
+        <TextView
+            android:id="@+id/weightLabelTextView"
+            style="@style/CattleLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:text="@string/label_weight"/>
+
+        <TextView
+            android:id="@+id/weightTextView"
+            style="@style/CattleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="4"/>
+
+        <TextView
+            android:id="@+id/sexLabelTextView"
+            style="@style/CattleLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="5"
+            android:text="@string/label_sex"/>
+
+        <TextView
+            android:id="@+id/sexTextView"
+            style="@style/CattleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="5"/>
+
+        <TextView
+            android:id="@+id/additionalNotesLabelTextView"
+            style="@style/CattleLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="6"
+            android:text="@string/label_additional_notes"/>
+
+        <TextView
+            android:id="@+id/additionalNotesTextView"
+            style="@style/CattleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="6"/>
+    </GridLayout>
+</ScrollView>
