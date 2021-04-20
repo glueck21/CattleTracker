@@ -17,7 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.example.cattletracker.DatabaseDescription.Cattle;
+import com.example.cattletracker.data.DatabaseDescription.Cattle;
 
 
 public class CattleFragment extends Fragment
