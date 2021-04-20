@@ -1,4 +1,4 @@
-package com.example.cattletracker;
+package com.example.cattletracker.data;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
@@ -8,7 +8,9 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 
-import com.example.cattletracker.DatabaseDescription.Cattle;
+//import com.example.cattletracker.CattleTrackerDatabaseHelper;
+import com.example.cattletracker.R;
+import com.example.cattletracker.data.DatabaseDescription.Cattle;
 
 public class CattleTrackerContentProvider extends ContentProvider {
     // used to access the database
