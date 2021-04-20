@@ -1,9 +1,9 @@
-package com.example.cattletracker;
+package com.example.cattletracker.data;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import com.example.cattletracker.DatabaseDescription.Cattle;
+import com.example.cattletracker.data.DatabaseDescription.Cattle;
 
 class CattleTrackerDatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "CattleTracker.db";
