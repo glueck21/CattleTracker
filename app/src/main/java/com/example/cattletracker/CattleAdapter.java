@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.cattletracker.DatabaseDescription.Cattle;
+import com.example.cattletracker.data.DatabaseDescription.Cattle;
 
 public class CattleAdapter
         extends RecyclerView.Adapter<CattleAdapter.ViewHolder> {
