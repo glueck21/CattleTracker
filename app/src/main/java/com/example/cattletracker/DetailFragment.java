@@ -17,12 +17,10 @@ import android.widget.TextView;
 
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.CursorLoader;
 import androidx.loader.content.Loader;
-import com.example.cattletracker.DatabaseDescription.Cattle;
+import com.example.cattletracker.data.DatabaseDescription.Cattle;
 
 public class DetailFragment extends Fragment
         implements LoaderManager.LoaderCallbacks<Cursor> {
