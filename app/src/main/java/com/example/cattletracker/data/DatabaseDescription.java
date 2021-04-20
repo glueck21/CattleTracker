@@ -1,4 +1,4 @@
-package com.example.cattletracker;
+package com.example.cattletracker.data;
 
 import android.content.ContentUris;
 import android.net.Uri;
@@ -7,7 +7,7 @@ import android.provider.BaseColumns;
 public class DatabaseDescription {
     // ContentProvider's name: typically the package name
     public static final String AUTHORITY =
-            "com.example.cattletracker";
+            "com.example.cattletracker.data";
 
     // base URI used to interact with the ContentProvider
     private static final Uri BASE_CONTENT_URI =
