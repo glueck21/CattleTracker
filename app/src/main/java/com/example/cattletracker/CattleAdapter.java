@@ -10,6 +10,9 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.cattletracker.data.DatabaseDescription.Cattle;
 
+import static android.graphics.Color.BLUE;
+import static android.graphics.Color.RED;
+
 public class CattleAdapter
         extends RecyclerView.Adapter<CattleAdapter.ViewHolder> {
 
@@ -33,7 +36,7 @@ public class CattleAdapter
             // attach listener to itemView
             itemView.setOnClickListener(
                     new View.OnClickListener() {
-                        // executes when the contact in this ViewHolder is clicked
+                        // executes when the cowId in this ViewHolder is clicked
                         @Override
                         public void onClick(View view) {
                             clickListener.onClick(Cattle.buildCattleUri(rowID));
@@ -71,8 +74,19 @@ public class CattleAdapter
     public void onBindViewHolder(ViewHolder holder, int position) {
         cursor.moveToPosition(position);
         holder.setRowID(cursor.getLong(cursor.getColumnIndex(Cattle._ID)));
-        holder.textView.setText(cursor.getString(cursor.getColumnIndex(
-                Cattle.COLUMN_COW_ID)));
+
+        String hasCalf = (cursor.getString(cursor.getColumnIndex(
+                Cattle.COLUMN_CALF_ID)));
+        if(hasCalf.trim().length() != 0) {
+            holder.textView.setText(cursor.getString(cursor.getColumnIndex(
+                    Cattle.COLUMN_COW_ID)));
+            holder.textView.setTextColor(BLUE);
+        }
+        else {
+            holder.textView.setText(cursor.getString(cursor.getColumnIndex(
+                    Cattle.COLUMN_COW_ID)));
+        }
+
     }
 
     // returns the number of items that adapter binds

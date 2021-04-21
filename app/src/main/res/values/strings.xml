@@ -2,6 +2,7 @@
     <string name="app_name">Cattle Tracker</string>
     <string name="menuitem_edit">Edit</string>
     <string name="menuitem_delete">Delete</string>
+    <string name="cow_data">Cow Inventory</string>
     <string name="hint_cow_id">Cow ID (Required)</string>
     <string name="hint_calf_id">Calf ID</string>
     <string name="hint_sire_id">Calf Sire ID</string>

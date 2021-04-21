@@ -141,7 +141,7 @@ public class AddEditFragment extends Fragment
         String input =
                 cowIdTextInputLayout.getEditText().getText().toString();
 
-        // if there is a name for the contact, show the FloatingActionButton
+        // if there is a name for the cowId, show the FloatingActionButton
         if (input.trim().length() != 0)
             saveCattleFAB.show();
         else
@@ -157,7 +157,7 @@ public class AddEditFragment extends Fragment
                     ((InputMethodManager) getActivity().getSystemService(
                             Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(
                             getView().getWindowToken(), 0);
-                    saveCattle(); // save contact to the database
+                    saveCattle(); // save cattle data to the database
                 }
             };
 
@@ -182,7 +182,7 @@ public class AddEditFragment extends Fragment
 
         if (addingNewCattle) {
             // use Activity's ContentResolver to invoke
-            // insert on the AddressBookContentProvider
+            // insert on the CattleTrackerContentProvider
             Uri newCattleUri = getActivity().getContentResolver().insert(
                     Cattle.CONTENT_URI, contentValues);
 
@@ -198,7 +198,7 @@ public class AddEditFragment extends Fragment
         }
         else {
             // use Activity's ContentResolver to invoke
-            // insert on the AddressBookContentProvider
+            // insert on the CattleTrackerContentProvider
             int updatedRows = getActivity().getContentResolver().update(
                     cattleUri, contentValues, null, null);
 

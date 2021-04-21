@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.loader.app.LoaderManager;
@@ -200,6 +201,11 @@ public class DetailFragment extends Fragment
             weightTextView.setText(data.getString(weightIndex));
             sexTextView.setText(data.getString(sexIndex));
             additionalNotesTextView.setText(data.getString(additionalNotesIndex));
+
+            String hasCalf = calfIdTextView.getText().toString();
+                if(hasCalf.trim().length() != 0)
+                    cowIdTextView.setTextColor(getResources().getColor(R.color.hasCalf));
+
         }
     }
 
