@@ -10,8 +10,8 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.cattletracker.data.DatabaseDescription.Cattle;
 
+import static android.graphics.Color.BLACK;
 import static android.graphics.Color.BLUE;
-import static android.graphics.Color.RED;
 
 public class CattleAdapter
         extends RecyclerView.Adapter<CattleAdapter.ViewHolder> {
@@ -85,6 +85,7 @@ public class CattleAdapter
         else {
             holder.textView.setText(cursor.getString(cursor.getColumnIndex(
                     Cattle.COLUMN_COW_ID)));
+            holder.textView.setTextColor(BLACK);
         }
 
     }

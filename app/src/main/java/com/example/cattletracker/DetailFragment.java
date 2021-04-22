@@ -88,7 +88,7 @@ public class DetailFragment extends Fragment
         sexTextView = (TextView) view.findViewById(R.id.sexTextView);
         additionalNotesTextView = (TextView) view.findViewById(R.id.additionalNotesTextView);
 
-        // load the catte data
+        // load the cattle data
         getLoaderManager().initLoader(CATTLE_LOADER, null, this);
         return view;
     }
@@ -155,6 +155,7 @@ public class DetailFragment extends Fragment
                 }
             };
 
+
     // called by LoaderManager to create a Loader
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
@@ -201,10 +202,6 @@ public class DetailFragment extends Fragment
             weightTextView.setText(data.getString(weightIndex));
             sexTextView.setText(data.getString(sexIndex));
             additionalNotesTextView.setText(data.getString(additionalNotesIndex));
-
-            String hasCalf = calfIdTextView.getText().toString();
-                if(hasCalf.trim().length() != 0)
-                    cowIdTextView.setTextColor(getResources().getColor(R.color.hasCalf));
 
         }
     }
