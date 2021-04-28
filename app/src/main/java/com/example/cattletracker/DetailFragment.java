@@ -1,9 +1,6 @@
 package com.example.cattletracker;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,13 +11,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.CursorLoader;
 import androidx.loader.content.Loader;
+
 import com.example.cattletracker.data.DatabaseDescription.Cattle;
 
 public class DetailFragment extends Fragment
@@ -117,44 +112,10 @@ public class DetailFragment extends Fragment
 
     // delete cattle
     private void deleteCattle() {
-        // use FragmentManager to display the confirmDelete DialogFragment
-        confirmDelete.show(getFragmentManager(), "confirm delete");
+        getActivity().getContentResolver().delete(
+                cattleUri, null, null);
+        listener.onCattleDeleted(); // notify listener
     }
-
-    // DialogFragment to confirm deletion of cattle
-    private final DialogFragment confirmDelete =
-            new DialogFragment() {
-                // create an AlertDialog and return it
-                @Override
-                public Dialog onCreateDialog(Bundle bundle) {
-                    // create a new AlertDialog Builder
-                    AlertDialog.Builder builder =
-                            new AlertDialog.Builder(getActivity());
-
-                    builder.setTitle(R.string.confirm_title);
-                    builder.setMessage(R.string.confirm_delete_message);
-
-                    // provide an OK button that simply dismisses the dialog
-                    builder.setPositiveButton(R.string.button_delete,
-                            new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(
-                                        DialogInterface dialog, int button) {
-
-                                    // use Activity's ContentResolver to invoke
-                                    // delete on the AddressBookContentProvider
-                                    getActivity().getContentResolver().delete(
-                                            cattleUri, null, null);
-                                    listener.onCattleDeleted(); // notify listener
-                                }
-                            }
-                    );
-
-                    builder.setNegativeButton(R.string.button_cancel, null);
-                    return builder.create(); // return the AlertDialog
-                }
-            };
-
 
     // called by LoaderManager to create a Loader
     @Override
